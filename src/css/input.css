@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base{
+  /* default heading */
+  h1{
+    @apply text-h1
+  }
+  h2{
+    @apply text-h2
+  }
+  h3{
+    @apply text-h3
+  }
+  h4{
+    @apply text-h4
+  }
+  h5{
+    @apply text-h5
+  }
+  h6{
+    @apply text-h6
+  }
+
+  /* default image control */
+  img{
+    @apply w-full h-full object-cover
+  }
+
+  /* aside */
+  aside{
+    @apply container border py-[120px] grid gap-4
+  }
+
+  /* article */
+  article{
+    @apply container border py-[120px] grid gap-4
+  }
+}
+
+@layer components{
+  /* primary button */
+  .btn-primary{
+    @apply bg-primary-500 text-white py-2 px-4 transition hover:bg-primary-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:opacity-75
+  }
+
+  /* default card */
+  .card{
+    @apply border p-6 rounded-xl grid gap-6 shadow-md hover:bg-primary-500 hover:text-white transition duration-300 ease-in-out
+  }
+
+  /* card area */
+  .card .card-child{
+    @apply rounded-lg overflow-hidden
+  }
+  .card .card-child img{
+    @apply brightness-50
+  }
+  .card .card-textarea{
+    @apply grid gap-2
+  }
+
+  /* image card */
+  .card-image{
+    @apply relative flex items-end rounded-lg overflow-hidden
+  }
+  /* image card area */
+  .card-image img{
+    @apply brightness-50 hover:blur-sm hover:scale-110 transition duration-300 ease-in-out
+  }
+  .card-image .image-child{
+    @apply absolute flex
+  }
+  .card-image .image-textarea{
+    @apply text-white z-20 self-end p-6
+  }
+
+}
