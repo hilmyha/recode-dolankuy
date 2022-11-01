@@ -30,9 +30,6 @@ module.exports = {
         },
         
       },
-      fontFamily: {
-        poppins: ['Poppins', 'sans-serif']
-      },
       fontSize: {
         // Headings
         'h7': ['14px', {
@@ -84,6 +81,9 @@ module.exports = {
       padding: {
         DEFAULT: '24px'
       },
+    },
+    fontFamily: {
+      poppins: ['Poppins', 'sans-serif']
     },
     screens: {
       'android': '510px',

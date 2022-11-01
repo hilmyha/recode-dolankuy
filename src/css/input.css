@@ -41,9 +41,26 @@
 }
 
 @layer components{
+  /* navbar */
+  .navbar{
+    @apply bg-white py-6 z-40 top-0 left-0 w-full shadow-lg border-b fixed
+  }
+  .navbar .navbar-child {
+    @apply container w-full flex justify-between items-center
+  }
+  .navbar .navbar-child .nav-menu-container{
+    @apply absolute tablet:bg-transparent shadow-lg tablet:shadow-none bg-white border-b tablet:border-none w-full top-full left-0 tablet:block tablet:static tablet:w-auto
+  }
+  .navbar .navbar-child .nav-menu-container ul{
+    @apply pb-6 tablet:pb-0 container transition ease-in-out duration-300 gap-2
+  }
+
   /* primary button */
   .btn-primary{
     @apply bg-primary-500 text-white py-2 px-4 transition hover:bg-primary-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:opacity-75
+  }
+  .btn-secondary{
+    @apply bg-secondary-500 text-white py-2 px-4 transition hover:bg-secondary-400 focus:outline-none focus:ring-2 focus:ring-secondary-500 focus:opacity-75
   }
 
   /* default card */

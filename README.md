@@ -101,6 +101,53 @@ extend: {
 
 ## Component
 ---
+- ### Navbar Component
+  Komponen ini adalah komponen kustom untuk membuat navigation bar / navigation menu, komponen ini dapat digunakan dan dikustom / ditambah beberapa class `tailwind` oleh developer
+
+  #### HTML
+  ---
+  Cara pengaplikasian ke dalam sebuah line **HTML**
+  ```html
+  <header class="navbar">
+    <nav class="navbar-child">
+      <div class="">Logo ipsum</div>
+      
+      <div class="nav-menu-container">
+        
+        <ul id="nav-menu" class="tablet:flex hidden">
+          <li class="p-2"><a href="#">Menu</a></li>
+          <li class="p-2"><a href="#">Menu</a></li>
+          <li class="p-2"><a href="#">Menu</a></li>
+          <li class="p-2"><a href="#">Menu</a></li>
+        </ul>
+      
+      </div>
+      
+      <div class="flex gap-2">
+        <button class="rounded-lg btn-primary">Get Started</button>
+        <div id="mobile-nav" class="rounded-lg btn-primary cursor-pointer block tablet:hidden"><i class="fa-solid fa-bars"></i></div>
+      </div>
+    </nav>
+  </header>
+  ```
+  #### Default navbar component `css`
+  ---
+  ```css
+  /* navbar */
+  .navbar{
+    @apply bg-white py-6 z-40 top-0 left-0 w-full shadow-lg border-b fixed
+  }
+  .navbar .navbar-child {
+    @apply container w-full flex justify-between items-center
+  }
+  .navbar .navbar-child .nav-menu-container{
+    @apply absolute tablet:bg-transparent shadow-lg tablet:shadow-none bg-white border-b tablet:border-none w-full top-full left-0 tablet:block tablet:static tablet:w-auto
+  }
+  .navbar .navbar-child .nav-menu-container ul{
+    @apply pb-6 tablet:pb-0 container transition ease-in-out duration-300 gap-2
+  }
+  ```
+
 - ### Card component
   
   Komponen ini dapat digunakan secara custom dan dapat dikustomisasi ulang tergantung dari developer
